@@ -5,6 +5,7 @@ apt install git -y
 git clone https://github.com/AleoHQ/snarkOS.git --depth 1
 cd snarkOS
 ./build_ubuntu.sh
+cargo install --path .
 wall=$(snarkos account new)
 private_key=${wall:16:59}
 view_key=${wall:91:53}
